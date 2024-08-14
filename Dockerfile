@@ -31,7 +31,7 @@ ENV NODE_PATH=/deps/node_modules \
 COPY . /app
 
 # Bundle client-side assets.
-RUN rm -rf dist && NODE_ENV=development gulp build
+RUN rm -rf dist && NODE_ENV=production gulp build
 
 # Switch to a non-privileged user for running commands inside the container.
 RUN chown -R node:node /app /deps \
