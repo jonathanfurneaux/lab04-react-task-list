@@ -4,21 +4,20 @@
 
 const React = require('react');
 
-// Define the TaskList component
-const TaskList = (props) => {
-  // At the moment the TaskList component is just a hard-coded HTML unordered
-  // list. We will be changing this during the lab.
-  const element = (
-    <div>
-      <h1>{ props.heading }</h1>
-      <ul>
-        <li>Clean my bed</li>
-        <li>Finish my homework</li>
-        <li>Brush my teeth</li>
-      </ul>
-    </div>
-  );
-  return element;
+class TaskList extends React.Component{
+  render()
+  {
+    const element = (
+      <div>
+        <h1>{this.props.heading} React Component</h1>
+        <ul>
+          <li>Clean my bed</li>
+          <li>Finish my homework</li>
+          <li>Brush my teeth</li>
+        </ul>
+      </div>
+    );
+  }
 };
 
 // Export the TaskList component
