@@ -9,10 +9,17 @@ const React = require('react');
 // Require our TaskList React component from "TaskList.js"
 const TaskList = require('./TaskList');
 
+//An array of tasks
+const tasks = [
+  {id: 1, description: 'Clean by bed', completed: false},
+  {id: 2, description: 'Finish my homework', completed: true},
+  {id: 3, description: 'Brush my teeth', complete:false}
+];
+
 // Here is where we actually define the Root component. At the moment it just
 // contains a single component, TaskList.
 const Root = () => {
-  const element = <TaskList heading="My task list" />;
+  const element = <TaskList myTasks={tasks} showMessage = {(message) => alert(message)}/>;
   return element;
 };
 
